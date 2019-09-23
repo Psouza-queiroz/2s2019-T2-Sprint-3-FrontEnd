@@ -16,11 +16,14 @@ CREATE TABLE Artistas
     ,IdEstilo     INT FOREIGN KEY REFERENCES Estilos (IdEstilo)
 );
 
-SELECT * FROM Estilos;
+	
 
 INSERT INTO Estilos VALUES ('Folk');
-INSERT INTO Artistas VALUES ('Stu Larsen', 4);
+INSERT INTO Artistas VALUES ('Stu Larsen', 8);
 
 SELECT * FROM ARTISTAS;
 
 SELECT A.IdArtista, A.Nome, A.IdEstilo, E.Nome AS NomeEstilo FROM Artistas A INNER JOIN Estilos E ON A.IdEstilo = E.IdEstilo;
+
+
+DELETE  FROM Estilos
