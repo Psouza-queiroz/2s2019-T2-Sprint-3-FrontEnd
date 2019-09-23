@@ -7,7 +7,7 @@ namespace Senai.Sstop.WebApi.Repositories
 {
     public class ArtistaRepository
     {
-        private string StringConexao = "Data Source=localhost; initial catalog=RoteiroSstop;User Id=sa;Pwd=132";
+        private string StringConexao = "Data Source=.\\SqlExpress; initial catalog=RoteiroSstop;User Id=sa;Pwd=132";
 
         public List<ArtistaDomain> Listar()
         {
