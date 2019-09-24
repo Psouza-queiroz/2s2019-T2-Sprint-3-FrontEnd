@@ -2,7 +2,7 @@
 
 <head>
 
-    <title>Exercícios</title>
+    <title>MARVEL > DC</title>
 
     <style>
         body {
@@ -18,7 +18,7 @@
 
     <script>
         let personagens = [{
-            nome: "Capitão Cometa",
+            nome: "Capitao Cometa",
             dataAparicao: 1951,
             editora: "DC"
         }, {
@@ -38,12 +38,51 @@
             dataAparicao: 1963,
             editora: "Marvel"
         }, {
-            nome: "Capitão América",
+            nome: "Capitao America",
             dataAparicao: 1940,
             editora: "Marvel"
         }];
+        let marvel_arr = personagens.filter(Element =>{
+            return Element.editora == "Marvel"
+        })
+        console.log(marvel_arr)
+        console.log('--------------------------------')
 
-        
+          let Data_arr = personagens.filter(Element =>{
+            return Element.dataAparicao < 1950;
+         })
+         console.log(Data_arr)
+         console.log('--------------------------------')
+
+
+         let nome_arr = personagens.map(Element =>{
+             return Element.nome;
+         })
+         console.log(nome_arr)
+         console.log('--------------------------------')
+
+         personagens.push(
+             {
+            nome: "Capitao Marvel",
+            dataAparicao: 1950,
+            editora: "Marvel"
+            }
+        )
+        console.log(personagens)
+        console.log('--------------------------------')
+
+        // let personagens_arr = personagens.filter(Element => {
+        //       return Element.editora === 'Marvel'
+        // personagensMarvel = Personagens_arr.length;
+        //  })
+        //  console.log(personagens_arr)
+
+         let personagensMarvel= personagens.filter(element =>{
+                        return element.editora === 'Marvel';
+                        });
+                        quantidadeDePersonagens = personagens.length;
+                        console.log(quantidadeDePersonagens);
+                        console.log('--------------------------------')
 
     </script>
 

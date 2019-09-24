@@ -60,6 +60,44 @@
             golsproprio:50,
             golscontra:33
         }];
+          //1. Lista somente os times cujas vitórias seja maior ou igual que 20
+
+                 let vitorias = times.filter(element =>{
+                              return element.vitorias >= 20;
+                         });
+                                 console.log(vitorias);
+                                 console.log('--------------------------------')
+
+        //2. Traga somente os nomes dos times
+
+                    let nomeTime = times.map(element =>{
+                           return element.nome;
+                        });
+                                 console.log(nomeTime);
+                                 console.log('--------------------------------')
+
+        //3	Adicione mais um time chamado Wolves, vitorias 12, empates 8, derrotas 10, gols proprios 38, golscontras 36;
+
+                 times.push({
+                         nome: "Wolves",
+                         vitorias: 12,
+                         empates: 8,
+                         derrotas:10,
+                         golsproprio:38,
+                          golscontra:36
+                         });
+                 console.log(times);
+                 console.log('--------------------------------')
+
+
+        
+        //4	Mostre o nome e a quantidade de jogos, quantidade de vitorias, empates, derrotas, golsProprios, golsContras, saldo de gols de um time.
+                        
+                    console.log(times[0])  
+                    console.log('--------------------------------') 
+
+
+        //5	Informe a quantidade de jogos do campeonato; 
     </script>
 
 </body>
