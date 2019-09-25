@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <title>PokeDex</title>
+</head>
+
+<body>
+    <div>
+            <div class="row justify-content-between">
+                    <div class="col-10">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Buscar Pokemon</span>
+                            </div>
+                            <input type="text" id="nomePokemon" class="form-control" placeholder="Nome do Pokemon"
+                                aria-label="nome" aria-describedby="basic-addon1" />
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <input class="btn btn-primary" type="submit" value="Buscar Pokemon" id="btnBuscar" />
+                    </div>
+                </div>
+        <table class="table ">
+            <thead class="table table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">habilidades</th>
+                </tr>
+
+            </thead>
+            <tbody id="a"></tbody>
+        </table>
+    </div>
+    <div>
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">habilidades</th>
+                </tr>
+            </thead>
+            <tbody id="Habilidads"></tbody>
+        </table>
+    </div>
+
+
+
+    <script>
+
+        window.onload = function () {
+
+            const tabela = document.querySelector('#a')
+            
+            console.log(tabela)
+            let url = "https://pokeapi.co/api/v2/pokemon";
+
+            fetch(url)
+                .then(resposta => resposta.json())
+                .then(data => pTabela(data))
+                .catch(erro => console.log(erro))
+
+
+
+            function pTabela(pokemon) {
+                pokemon.results.forEach(element => {
+                    console.log(element)
+                    const tr = document.createElement('tr')
+                    const td_Id = document.createElement('td')
+                    const td_nome = document.createElement('td')
+                    const td_Url = document.createElement('td')
+
+                   
+
+                    td_Id.textContent = element.id
+                    td_nome.textContent = element.name
+                    td_Url.textContent = element.url
+
+                    tr.appendChild(td_Id)
+                    tr.appendChild(td_nome)
+                    tr.appendChild(td_Url)
+                    tabela.appendChild(tr)
+
+                    
+                });
+            }
+        }
+
+
+        
+    
+
+
+
+
+    </script>
+</body>
+
+
+</html>
