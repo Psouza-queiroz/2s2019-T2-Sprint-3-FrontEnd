@@ -1,25 +1,32 @@
 import React from 'react';
 import logo from '../../assets/img/logo_opflix.png';
-import pipoca from '../../assets/img/popcorn.png';
 import dora from '../../assets/img/Filme_dora.jpg'
+import eutimato from '../../assets/img/eutimato.jpg'
 import '../../assets/css/home.css'
 import './App.css';
 
+import { Link } from "react-router-dom";
 
 
-function App() {
-return (
-<div className="App">
-  <div className="nav">
-    <ul>
-      <li>Lancamentos</li>
-    </ul>
+
+
+
+    function App() {
+    return (
+    <div className="App">
+      <div className="nav">
+        <ul>
+          <li>Lancamentos</li>
+        </ul>
+    
     <img src={logo} width="100px" height="50%" />
 
     <div className="login">
       <ul>
-        <li><a href="">Login</a></li>
-        <li><a href="">Cadastrar</a></li>
+        <li><Link to="/login">Login</Link></li>
+        <li><Link to="/Cadastrar">Cadastrar  </Link></li>
+        {/* <li><Link to="/Homeadm">teste  </Link></li>
+        <li><Link to="/Home">teste2  </Link></li> */}
       </ul>
     </div>
   </div>
@@ -34,12 +41,22 @@ return (
       direito
     </button>
 
+
     <div className="caixa">
-    <img src={dora} width="100%"  />
+
+        <img src={dora} width="100%"/>
+        
+      
+    
+      
 
     </div>
     <div className="caixa">
-
+      
+          <img src={eutimato} width="100%"/>
+          
+          
+        
 
     </div>
     <div className="caixa">
@@ -90,4 +107,4 @@ return (
 );
 }
 
-export default App;
+export default App; 
