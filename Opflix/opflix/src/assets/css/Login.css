@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;  
+}
+.imagem{
+    display: flex;  
+    align-content: center;
+    -webkit-clip-path: url(#mask);
+    clip-path: polygon(0 0, 53% 0, 43% 100%, 0% 100%);
+    background-color:black ;
+    height: 100%;
+    width: 100%;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+  
+  
