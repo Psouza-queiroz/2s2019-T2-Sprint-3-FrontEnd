@@ -1,27 +1,36 @@
-import React from 'react';
+import React from 'react'
 import logo from "../../assets/img/logo_opflix.png"
 import preto from "../../assets/img/preto.png"
 import '../../assets/css/Login.css'
+import Rodape from '../../components/Rodape';
 
 
 import { Link } from "react-router-dom";
-function Login(){
-    return(
-        <div className="App">
-          <div className="imagem">
-              <img className="logo" src={logo} alt="" width="100%" height="100%"/>
-              <img src={preto}  width="100%" height="100%"/>
-            </div>
-            <div className="pequeRoda">
+function Login() {
+return (
+<div className="App">
+  <div className="imagem">
+    <Link to="/"><img href="" className="logo" src={logo} width="100px" /></Link>
+  </div>
 
-              <h2>Escola Senai De Informatica</h2>
-              <p>senai@Informatica.com.br</p>
-              <p>Endereço:  Alameda Barão de Limeira, 539 - Santa Cecilia</p>
-              <p>Sistema Feito Por Pedro</p>
-              
-            </div>
 
-        </div>
-            )
+  <div className="meio">
+    <div className="caixota">
+      <div id="formi">
+
+        <form action="">
+          <h3>Email:</h3>
+          <input type="aaaaaaaaaaaa" /> <br/>
+          <h3>Senha:</h3>
+          <input type="text" />
+          <br/>
+          <button id="btn" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+)
 }
-export default Login; 
+export default Login;

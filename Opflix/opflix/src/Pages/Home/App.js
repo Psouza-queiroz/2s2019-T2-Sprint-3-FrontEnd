@@ -1,17 +1,22 @@
-import React from 'react';
+import React,{Component} from 'react';
 import logo from '../../assets/img/logo_opflix.png';
-import dora from '../../assets/img/Filme_dora.jpg'
-import eutimato from '../../assets/img/eutimato.jpg'
 import '../../assets/css/home.css'
 import './App.css';
 
+
 import { Link } from "react-router-dom";
+import Rodape from '../../components/Rodape';
 
+class App extends Component{
 
-
-
-
-    function App() {
+  constructor(){
+    super()
+    
+  }
+  
+  
+  
+  render() {
     return (
     <div className="App">
       <div className="nav">
@@ -44,7 +49,7 @@ import { Link } from "react-router-dom";
 
     <div className="caixa">
 
-        <img src={dora} width="100%"/>
+  
         
       
     
@@ -53,7 +58,7 @@ import { Link } from "react-router-dom";
     </div>
     <div className="caixa">
       
-          <img src={eutimato} width="100%"/>
+       
           
           
         
@@ -95,16 +100,10 @@ import { Link } from "react-router-dom";
       direito
     </button>
   </div>
-  <div className="pequeRoda">
-
-    <h2>Escola Senai De Informatica</h2>
-    <p>senai@Informatica.com.br</p>
-    <p>Endereço:  Alameda Barão de Limeira, 539 - Santa Cecilia</p>
-    <p>Sistema Feito Por Pedro</p>
-    
-  </div>
+ <Rodape/>
 </div>
 );
+}
 }
 
 export default App; 
