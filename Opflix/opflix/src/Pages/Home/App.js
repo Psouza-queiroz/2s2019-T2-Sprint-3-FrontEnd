@@ -30,8 +30,8 @@ class App extends Component{
       <ul>
         <li><Link to="/login">Login</Link></li>
         <li><Link to="/Cadastrar">Cadastrar  </Link></li>
-        {/* <li><Link to="/Homeadm">teste  </Link></li>
-        <li><Link to="/Home">teste2  </Link></li> */}
+         {/* <li><Link to="/Homeadm">teste  </Link></li> 
+        <li><Link to="/Home">teste2  </Link></li>  */}
       </ul>
     </div>
   </div>

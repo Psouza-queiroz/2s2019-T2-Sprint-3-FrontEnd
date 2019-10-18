@@ -13,17 +13,38 @@ import DashboardFilmes from './Pages/Dashboard/DashboardFilmes'
 
 import { Route, Link, BrowserRouter as Router, Switch, Redirect} from "react-router-dom";
 
+import {ParseJwt} from './services/auth'
+
 import * as serviceWorker from './serviceWorker';
+
+const PermissaoComum = ({component: Component}) =>(
+    <Route
+    render={
+        props =>
+            ParseJwt().Permissao === undefined ? (
+                <Component {...props} />
+            ) : (
+                <HomeAdm {...props }/>
+            )
+        
+    }
+    
+    
+    />
+);
+
 
 const routing = (
     <Router>
         <div>
             <Switch>
                 <Route exact path='/' component={App} />
-                <Route exact path='/Cadastrar' component={Cadastrar}/>
-                <Route exact path='/login' component={Login} />
-                <Route exact path='/Homeadm' component={HomeAdm} />
-                <Route exact path='/Home' component={Home} />
+                <Route  path='/Cadastrar' component={Cadastrar}/>
+                <Route  path='/login' component={Login} />
+                
+                <PermissaoComum  path='/Home' component={Home} />
+
+               
                     
                 
               
