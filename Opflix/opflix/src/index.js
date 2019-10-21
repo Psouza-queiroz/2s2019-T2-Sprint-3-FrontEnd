@@ -21,7 +21,7 @@ const PermissaoComum = ({component: Component}) =>(
     <Route
     render={
         props =>
-            ParseJwt().Permissao === undefined ? (
+            ParseJwt().Permissao === "Usuario" ? (
                 <Component {...props} />
             ) : (
                 <HomeAdm {...props }/>
@@ -41,6 +41,9 @@ const routing = (
                 <Route exact path='/' component={App} />
                 <Route  path='/Cadastrar' component={Cadastrar}/>
                 <Route  path='/login' component={Login} />
+                <Route path ='/dashboard' component={Dashboard}/>
+                <Route path ='/dashboardfilme' component={DashboardFilmes}/>
+
                 
                 <PermissaoComum  path='/Home' component={Home} />
 

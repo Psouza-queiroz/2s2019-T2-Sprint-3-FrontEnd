@@ -11,91 +11,98 @@ import { Link } from "react-router-dom";
 
 
 
-    function Adm() {
-    return (
+function Adm() {
+  return (
     <div className="App">
       <div className="nav">
+        <div className="principal">
+
         <ul>
-          <li>Lancamentos</li>
+        <Link to="/dashboardfilme"><li>Lancamentos</li></Link>
         </ul>
-    
-    <img src={logo} width="100px" height="50%" />
+        <ul>
+          <Link to="/dashboard"><li>Categorias</li></Link>
+        </ul>
+        </div>
 
-    <div className="login">
-      <ul>
-        <li>Administrador</li>
-        <li><Link to="/ ">Deslogar</Link></li>
-      </ul>
-    </div>
-  </div>
+        <img src={logo} width="100px" height="50%" />
 
-  <div className="Lancamentos">
-    <h2>Lancamentos</h2>
-  </div>
+        <div className="login">
+          <ul>
+            <li>Administrador</li>
+            <li><Link to="/ ">Deslogar</Link></li>
+          </ul>
+        </div>
+      </div>
 
-  <div className="sessaoDaTarde">
+      <div className="Lancamentos">
+        <h2>Lancamentos</h2>
+      </div>
 
-    <button className="butao">
-      direito
+
+      <div className="sessaoDaTarde">
+
+        <button className="butao">
+          direito
     </button>
 
 
-    <div className="caixa">
-      <a href="https://www.youtube.com/watch?v=gUTtJjV852c&t=19s">
-        <img src={dora} width="100%"/>
-      </a>  
+        <div className="caixa">
+          <a href="https://www.youtube.com/watch?v=gUTtJjV852c&t=19s">
+            <img src={dora} width="100%" />
+          </a>
 
-    </div>
-    <div className="caixa">
-      <img src={eutimato} width="100%"/>
+        </div>
+        <div className="caixa">
+          <img src={eutimato} width="100%" />
 
-    </div>
-    <div className="caixa">
+        </div>
+        <div className="caixa">
 
 
-    </div>
+        </div>
 
-    <button className="butao">
-      direito
+        <button className="butao">
+          direito
     </button>
-  </div>
+      </div>
 
-  <div className="FilmesSeries">
-    <h2>Filmes/Series</h2>
-  </div>
+      <div className="FilmesSeries">
+        <h2>Filmes/Series</h2>
+      </div>
 
-  <div className="sessaoDaTarde">
+      <div className="sessaoDaTarde">
 
-    <button className="butao">
-      direito
+        <button className="butao">
+          direito
     </button>
 
-    <div className="caixa">
+        <div className="caixa">
 
 
-    </div>
-    <div className="caixa">
+        </div>
+        <div className="caixa">
 
 
-    </div>
-    <div className="caixa">
+        </div>
+        <div className="caixa">
 
 
-    </div>
-    <button className="butao">
-      direito
+        </div>
+        <button className="butao">
+          direito
     </button>
-  </div>
-  <div className="pequeRoda">
+      </div>
+      <div className="pequeRoda">
 
-    <h2>Escola Senai De Informatica</h2>
-    <p>senai@Informatica.com.br</p>
-    <p>Endereço:  Alameda Barão de Limeira, 539 - Santa Cecilia</p>
-    <p>Sistema Feito Por Pedro</p>
-    
-  </div>
-</div>
-);
+        <h2>Escola Senai De Informatica</h2>
+        <p>senai@Informatica.com.br</p>
+        <p>Endereço:  Alameda Barão de Limeira, 539 - Santa Cecilia</p>
+        <p>Sistema Feito Por Pedro</p>
+
+      </div>
+    </div>
+  );
 }
 
 export default Adm; 

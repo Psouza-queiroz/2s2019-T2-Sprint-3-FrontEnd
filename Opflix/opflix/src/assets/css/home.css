@@ -118,4 +118,10 @@ p{
     border-bottom:  3px #DB202C solid;
     width:fit-content; 
 }
+.principal{
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+}
+
 
